@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    
+}
+.header-section{
+    width: 100%;
+    height: 920px;
+    background: 
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.9),   
+            rgba(0, 0, 0, 0.6),   
+            rgba(0, 0, 0, 0.9)    
+        ),
+        url("../IMG/background-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+}
+ .text-tren{
+    margin-left: 70px;
+      margin-top: 50px;
+      font-size: 30px;
+      width: 90%;
+    }
+    .last-btn{
+      margin-left: 70px;
+    }
+.hero{
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height:900px;
+  background: black; 
+  border-top: 3px solid red;
+  box-shadow: 0 -7px 50px rgba(128, 0, 255, 0.6);
+  border-top-left-radius: 30% 10%;
+  border-top-right-radius: 30% 10%;
+}
+
+.first-page{
+    padding: 0 100px;
+}
+
+.logo{
+    width: 250px;
+    height: 150px;
+}
+.btn-1{
+    padding: 0 20px;
+    height: 40px;
+
+}
+.scale {
+  transform: scale(1);               
+  transition: transform 0.3s ease;   
+}
+.p-te{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.scale:hover {
+  transform: scale(1.1);            
+}
+.middle-page{
+    margin-top: 135px;
+}
+.text-h2{
+    font-size: 60px;
+  }
+  .scroll-row {
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none; 
+    }
+    .scroll-row::-webkit-scrollbar {
+      display: none; 
+    }
+
+    .scroll-row {
+      -webkit-overflow-scrolling: touch;
+    }
+    .data:hover{
+      scale: 1.1;
+    }
+    .info-card{
+       background: linear-gradient(135deg, #1a093b, #0b0b0b);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 -5px 20px rgba(120, 60, 255, 0.3);
+  color: #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(180, 70, 255, 0.5);
+}
+.i-icon{
+  font-size: 50px;
+  margin-top: 0;
+}
+.faq-item {
+  margin-left: 70px;
+  margin-top: 50px;
+  font-size: 30px;
+  width: 90%;
+  cursor: pointer;
+  background-color: #222;
+  transition: all 0.3s ease;
+}
+.faq-item:hover {
+  background-color:#444;
+
+}
+.fap-answer {
+  display: none;
+  margin-left: 70px;
+  font-size: 20px;
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  width: 90%;
+}
+.footer {
+      background-color: #000;
+      padding: 50px 0;
+    }
+
+    .footer a {
+      color: #757575;
+      font-size: 14px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+      color: #b3b3b3;
+    }
+
+    .footer .language-btn {
+      border: 1px solid #757575;
+      background: transparent;
+      color: #757575;
+      padding: 5px 15px;
+      font-size: 14px;
+      border-radius: 2px;
+    }
+
+    .footer .language-btn:hover {
+      color: white;
+      border-color: white;
+    }
+
+    .footer-bottom {
+      color: #757575;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+ @media (max-width: 992px) {
+  .first-page {
+    padding: 15px 40px;
+  }
+  .logo {
+    width: 180px;
+  }
+  .btn {
+    font-size: 15px;
+    padding: 6px 18px;
+  }
+  .header-section {
+    height: 975px;
+  }
+}
+
+@media (max-width: 576px) {
+  .first-page {
+    padding: 0 15px;
+  }
+  .logo {
+    width: 150px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+  .p-te{
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .header-section {
+    height: 675px;
+  }
+  .text-tren{
+      margin-top: 50px;
+      font-size: 20px;
+      margin-left: auto;
+    }
+    .last-btn{
+      margin-left: 10px;
+    }
+  .text-h2{
+    font-size: 30px;
+    width: 100%;
+  }
+  .middle-page{
+    margin-top: 100px;
+}
+ .hero {
+    border-top-left-radius: 20% 6%;
+    border-top-right-radius: 20% 6%;
+  }
+  .faq-item {
+  margin-left: 10px;
+  margin-top: 50px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #222;
+  transition: all 0.3s ease;
+}
+.h4-text{
+  font-size: 15px;
+}
+.fap-answer {
+  display: none;
+  font-size: 15px;
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  margin-left: 10px;
+  width: 100%;
+}
+.faq-item:hover {
+  background-color:#444;
+
+}
+}
