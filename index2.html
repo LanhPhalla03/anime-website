@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone (Bootstrap)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 70px;
+        height: 100vh;
+        background: #000;
+        border-right: 1px solid #222;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+
+      .sidebar i {
+        font-size: 1.5rem;
+        color: #aaa;
+        transition: 0.3s;
+      }
+      .sidebar i:hover {
+        color: #fff;
+      }
+      .scroll-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scroll-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Hero */
+      .hero {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url("https://i.pinimg.com/736x/35/8c/2b/358c2bbdfe12c87217812b72a2bbd5cf.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        margin-left: 70px;
+      }
+
+      .poster img {
+        border-radius: 8px;
+        transition: transform 0.2s ease;
+      }
+      .poster img:hover {
+        transform: scale(1.05);
+      }
+
+      .movie-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .movie-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          height: 60vh;
+        }
+        .sidebar {
+          width: 60px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column align-items-center pt-3 gap-4">
+      <i class="bi bi-search"></i>
+      <i class="bi bi-house-door-fill text-danger"></i>
+      <i class="bi bi-collection-play"></i>
+      <i class="bi bi-tv"></i>
+      <i class="bi bi-plus-lg"></i>
+      <i class="bi bi-shuffle"></i>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-end p-5">
+      <div>
+        <h1 class="fw-bold display-4">Money Heist</h1>
+        <p class="text-light">8.8/10 IMDb • 2B+ Streams</p>
+        <div class="d-flex gap-3">
+          <button class="btn btn-danger px-4">
+            <i class="bi bi-play-fill me-2"></i>Play
+          </button>
+          <button class="btn btn-outline-light px-4">
+            <i class="bi bi-play-circle me-2"></i>Watch Trailer
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container-fluid px-4" style="margin-left: 70px">
+      <!-- Popular Series -->
+      <div class="d-flex align-items-center justify-content-between mt-4">
+        <h4 class="fw-bold ms-4">POPULAR SERIES</h4>
+        <div class="flex-grow-1 border-bottom border-secondary ms-3"></div>
+      </div>
+
+      <div id="popular-movie" class="d-flex overflow-x-auto scroll-hide py-3 gap-3">
+       
+      </div>
+
+      <section class="container-fluid mt-3 text-white px-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <h4 class="fw-bold">WATCH NOW</h4>
+          <div class="flex-grow-1 border-bottom border-secondary ms-3"></div>
+        </div>
+
+        <div id="animeList" class="row gy-4">
+         
+        </div>
+      </section>
+    </main>
+        <!-- Footer -->
+    <footer class="mt-5 py-5 bg-black text-secondary" style="margin-left:70px; border-top:1px solid #222;">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12 col-md-3">
+            <h6 class="text-white mb-3">Questions? Contact us.</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#" class="text-secondary text-decoration-none">FAQ</a></li>
+              <li><a href="#" class="text-secondary text-decoration-none">Investor Relations</a></li>
+              <li><a href="#" class="text-secondary text-decoration-none">Privacy</a></li>
+              <li><a href="#" class="text-secondary text-decoration-none">Speed Test</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3">
+            <h6 class="text-white mb-3">Help Center</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#" class="text-secondary text-decoration-none">Account</a></li>
+              <li><a href="#" class="text-secondary text-decoration-none">Media Center</a></li>
+              <li><a href="#" class="text-secondary text-decoration-none">Jobs</a></li>
+              <li><a href="#" class="text-secondary text-decoration-none">Redeem Gift Cards</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3">
+            <h6 class="text-white mb-3">Terms & Info</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#" class="text-secondary text-decoration-none">Terms of Use</a></li>
+              <li><a href="#" class="text-secondary text-decoration-none">Cookie Preferences</a></li>
+              <li><a href="#" class="text-secondary text-decoration-none">Corporate Info</a></li>
+              <li><a href="#" class="text-secondary text-decoration-none">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 text-md-end text-center">
+            <div class="d-flex justify-content-md-end justify-content-center gap-3 mb-3">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-youtube"></i>
+            </div>
+            <p class="small mb-0 text-secondary">© 2025 Sonic </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  <script src="main2.js"></script>
+</html>

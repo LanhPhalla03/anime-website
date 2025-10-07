@@ -40,3 +40,31 @@ item.addEventListener('click', () =>{
 });
 });
 
+const headerSection = document.querySelector('.header-section');
+const heroSection = document.querySelector('.hero');
+const footerSection = document.querySelector('.footer');
+const signOutBtn = document.querySelector('.btn-1');
+const finishBtn = document.querySelector('.btn-danger.btn-primary'); 
+
+function showLogin() {
+  headerSection.classList.add('d-none');
+  heroSection.classList.add('d-none');
+  footerSection.classList.add('d-none');
+  loginPage.classList.remove('d-none');
+}
+
+function login() {
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
+
+  if (username && password) {
+    window.location.href = "index2.html"; 
+  } else {
+    alert('Please enter username and password');
+  }
+}
+
+signOutBtn.addEventListener('click', showLogin);
+finishBtn.addEventListener('click', showLogin);
+
+
